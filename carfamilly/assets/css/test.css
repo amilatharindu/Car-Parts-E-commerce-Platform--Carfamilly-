@@ -1,0 +1,123 @@
+/* General Section Styling */
+.section.featured-car {
+  background-color: #f8f9fa; /* Light background */
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Container and List Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-car-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Card Styling */
+.featured-car-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.featured-car-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Banner Styling */
+.card-banner img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.featured-car-card:hover img {
+  transform: scale(1.1); /* Subtle zoom effect */
+}
+
+/* Card Content */
+.card-content {
+  padding: 15px;
+}
+
+.card-title-wrapper {
+  margin: 10px 0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.card-title a:hover {
+  color: #e74c3c; /* Highlight color on hover */
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .featured-car-list {
+    gap: 15px;
+  }
+
+  .featured-car-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,237 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nissan - Company Overview</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .header-logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            text-align: center;
+            margin: 20px auto;
+            background-color: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideInLeft 1s ease;
+        }
+
+        .about h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .about p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Top Rated Models Section */
+        .models {
+            margin: 40px auto;
+            max-width: 1200px;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease;
+        }
+
+        .models h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .model {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .model-img {
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .model-details {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .model-details h3 {
+            font-size: 1.5rem;
+            color: #003366;
+        }
+
+        .model-details p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/nissanlogo.png" alt="Nissan Logo" class="header-logo">
+        </div>
+        <h1>Nissan Company Overview</h1>
+        <p>Excellence in Automotive Engineering</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Nissan</h2>
+            <p>Nissan, established in 1933 in Japan, is a global automaker known for its dependable, innovative, and affordable vehicles. Nissan gained worldwide acclaim with models like the Altima, Sentra, and Pathfinder, blending style with practicality. Nissan is a trailblazer in electric vehicles, with the Nissan LEAF being one of the world’s best-selling electric cars, emphasizing the brand's commitment to a sustainable future. Known for its advanced safety features, Nissan also invests heavily in autonomous driving and intelligent mobility technology, making strides in vehicle connectivity and driver-assist systems.</p>
+        </section>
+
+        <!-- Top Rated Models -->
+        <section class="models">
+            <h2>Top Rated Nissan Models</h2>
+
+            <div class="model">
+                <img src="images/nissan/nissan1.jpeg" alt="Nissan Altima" class="model-img">
+                <div class="model-details">
+                    <h3>Nissan Altima</h3>
+                    <p><strong>Model Year:</strong> 2024</p>
+                    <p><strong>Features:</strong> Advanced safety systems, fuel-efficient engine, luxurious interior.</p>
+                    <p><strong>Performance:</strong> Smooth driving experience with innovative technology.</p>
+                </div>
+            </div>
+
+            <div class="model">
+                <img src="images/nissan/nissan2.jpg" alt="Nissan Sentra" class="model-img">
+                <div class="model-details">
+                    <h3>Nissan Sentra</h3>
+                    <p><strong>Model Year:</strong> 2024</p>
+                    <p><strong>Features:</strong> Compact design, advanced driver-assist systems, fuel efficiency.</p>
+                    <p><strong>Performance:</strong> Excellent mileage and urban agility.</p>
+                </div>
+            </div>
+
+            <div class="model">
+                <img src="images/nissan/gtr.jpg" alt="Nissan GT-R" class="model-img">
+                <div class="model-details">
+                    <h3>Nissan GT-R</h3>
+                    <p><strong>Model Year:</strong> 2024</p>
+                    <p><strong>Features:</strong> Twin-turbo V6 engine, advanced aerodynamics, high-performance sports car.</p>
+                    <p><strong>Performance:</strong> Exceptional acceleration and handling, designed for speed enthusiasts.</p>
+                </div>
+            </div>
+            
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nissan. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

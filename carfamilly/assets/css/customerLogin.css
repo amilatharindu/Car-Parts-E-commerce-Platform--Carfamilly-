@@ -1,0 +1,197 @@
+/* Import Google Fonts for the design */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+/* Apply basic reset and box-sizing to all elements, setting the font family to "Open Sans" */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Style for the body: centering content vertically and horizontally, with full viewport height */
+body {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px; /* Adds slight padding to avoid content touching the screen edges */
+}
+
+/* Adding a full-screen background image with a slight overlay */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/test.jpg"); /* Add your image URL here */
+  background-position: center;
+  background-size: cover; /* Cover the entire screen */
+  z-index: -1; /* Ensure it appears behind all content */
+  filter: blur(6px); /* Apply blur effect */
+}
+
+/* Wrapper for the form, creating a glassmorphism effect with blurred background */
+.wrapper {
+  background: transparent; /* Semi-transparent white for glass effect */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  width: 400px;
+  border-radius: 20px; /* Rounded corners */
+  padding: 30px;
+  text-align: center; /* Center text inside the wrapper */
+  border: 1px solid rgba(188, 188, 188, 0.5); /* Semi-transparent border */
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+}
+
+/* Optional: Add some spacing to form elements inside the wrapper */
+.wrapper input,
+.wrapper button {
+  margin-top: 10px;
+}
+
+
+/* Styling the form to align fields vertically */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the form heading */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255); /* text color */
+  font-weight: 550;
+}
+
+/* Input field styling with a border at the bottom */
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ffffff; /* Black bottom border */
+  margin: 15px 0;
+}
+
+/* Styling for labels inside the input fields */
+.input-field label {
+  position: absolute;
+  top: 50%; /* Center label vertically */
+  left: 0;
+  transform: translateY(-50%); /* Aligns the label with the input field */
+  color: #ffffff; /* Black text color */
+  font-size: 16px;
+  pointer-events: none; /* Prevents the label from being interactive */
+  transition: 0.15s ease; /* Smooth transition for label animation */
+}
+
+/* Input fields with transparent background and white text */
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent; /* No background */
+  border: none; /* Removes border */
+  outline: none; /* Removes focus outline */
+  font-size: 16px;
+  color: #ffffff; /* Black text color */
+}
+
+/* Animation for moving the label upwards when the input is focused or valid */
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  font-size: 0.8rem; /* Smaller label font size */
+  top: 10px;
+  transform: translateY(-120%); /* Moves the label upwards */
+}
+
+/* Styling for the 'Remember me' checkbox and 'Forgot password' link */
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Separates the checkbox and link */
+  margin: 25px 0 35px 0;
+  color: #ffffff; /* Black text color */
+}
+
+/* Checkbox styling */
+#remember {
+  accent-color: #ffffff; /* Changes the color of the checkbox */
+}
+
+/* Styling for the 'Remember me' label */
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+/* Slight margin between the checkbox and the 'Remember me' text */
+.forget label p {
+  margin-left: 8px;
+}
+
+/* Styling for links inside the wrapper */
+.wrapper a {
+  color: #ffffff; /* Black link color */
+  text-decoration: none; /* Removes underline from links */
+}
+
+/* Adds underline on hover for the links */
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the submit button */
+#login {
+  background: #fff; /* White button background */
+  color: rgb(27, 27, 27); /* Black text color */
+  font-weight: 600; /* Bold text */
+  border: none; /* No border */
+  padding: 12px 20px; /* Padding inside the button */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  border-radius: 25px; /* Slightly rounded corners */
+  font-size: 16px;
+  border-color: #bcbcbc;
+  border: 2px solid #bcbcbc; /* No border by default */
+  transition: 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the button: changes to transparent background and white border */
+#login:hover {
+  color: #000000; /* White text color on hover */
+  border-color: #8e8e8e; /* Adds white border on hover */
+  background: linear-gradient(135deg, #ffffff, #999999); /* Semi-transparent background on hover */
+}
+
+/* Styling for the registration text below the form */
+.register {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Normal link state */
+a {
+    color: blue;   /* Change to any color you like */
+    text-decoration: none;  /* Optional: Remove underline */
+}
+
+/* Hover state (when the user hovers over the link) */
+a:hover {
+    color: red;   /* Change color on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Visited state (after the link has been clicked) */
+a:visited {
+    color: purple;   /* Change color for visited links */
+}
+
+/* Active state (when the link is clicked) */
+a:active {
+    color: rgb(237, 21, 72);   /* Change color when the link is clicked */
+}
+p{
+  color: #fff;
+}
+
+

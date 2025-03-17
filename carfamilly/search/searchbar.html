@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Brands, Models, and Parts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Simple styling for search results */
+        .result-item {
+            cursor: pointer;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .result-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        input {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 8px;
+        }
+
+        #brandResult, #modelResult, #partResult {
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+            display: none; /* Hidden initially */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Search Database</h1>
+
+<!-- Search Bar -->
+<form method="GET" action="cartnew/project/view_products.php">
+    <div>
+        <label for="brandSearch">Search by Brand:</label>
+        <input type="text" id="brandSearch" name="brand" oninput="searchBrand()" autocomplete="off">
+        <div id="brandResult"></div>
+    </div>
+
+    <div>
+        <label for="modelSearch">Search by Model:</label>
+        <input type="text" id="modelSearch" name="model" oninput="searchModel()" autocomplete="off">
+        <div id="modelResult"></div>
+    </div>
+
+    <div>
+        <label for="partSearch">Search by Part:</label>
+        <input type="text" id="partSearch" name="part" oninput="searchPart()" autocomplete="off">
+        <div id="partResult"></div>
+    </div>
+
+    <div>
+        <button type="button" id="finalSearchBtn">Search All</button>
+    </div>
+
+    <div id="finalResult"></div>
+</form>
+
+<script>
+    function searchBrand() {
+        var brand = $('#brandSearch').val();
+        if (brand) {
+            $.ajax({
+                url: 'search.php',
+                method: 'POST',
+                data: { brandSearch: brand, type: 'brand' },
+                success: function(data) {
+                    $('#brandResult').html(data).show();
+                    $('#modelSearch').val('');
+                    $('#modelResult').html('').hide();
+                    $('#partSearch').val('');
+                    $('#partResult').html('').hide();
+                }
+            });
+        } else {
+            $('#brandResult').hide();
+        }
+    }
+
+    function searchModel() {
+        var model = $('#modelSearch').val();
+        var brand = $('#brandSearch').val();
+        if (model) {
+            $.ajax({
+                url: 'search.php',
+                method: 'POST',
+                data: { modelSearch: model, brandSearch: brand, type: 'model' },
+                success: function(data) {
+                    $('#modelResult').html(data).show();
+                    $('#partSearch').val('');
+                    $('#partResult').html('').hide();
+                }
+            });
+        } else {
+            $('#modelResult').hide();
+        }
+    }
+
+    function searchPart() {
+        var part = $('#partSearch').val();
+        var brand = $('#brandSearch').val();
+        var model = $('#modelSearch').val();
+        if (part) {
+            $.ajax({
+                url: 'search.php',
+                method: 'POST',
+                data: { partSearch: part, brandSearch: brand, modelSearch: model, type: 'part' },
+                success: function(data) {
+                    $('#partResult').html(data).show();
+                }
+            });
+        } else {
+            $('#partResult').hide();
+        }
+    }
+
+    $('#finalSearchBtn').click(function() {
+        var brand = $('#brandSearch').val();
+        var model = $('#modelSearch').val();
+        var part = $('#partSearch').val();
+
+        // Redirect to view_products.php with query parameters
+        window.location.href = `cartnew/project/view_products.php`;
+    });
+
+    $(document).on('click', '.result-item', function() {
+        var inputId = $(this).data('input');
+        var itemText = $(this).text();
+        $('#' + inputId).val(itemText);
+        $('.result-item').parent().hide(); // Hide the dropdown after selection
+    });
+</script>
+
+</body>
+</html>

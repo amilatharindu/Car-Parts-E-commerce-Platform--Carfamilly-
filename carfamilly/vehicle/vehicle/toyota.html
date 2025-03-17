@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota - Company Overview</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .header-logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            text-align: center;
+            margin: 20px auto;
+            background-color: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideInLeft 1s ease;
+        }
+
+        .about h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .about p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Top Rated Models Section */
+        .models {
+            margin: 40px auto;
+            max-width: 1200px;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease;
+        }
+
+        .models h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .model {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .model-img {
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .model-details {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .model-details h3 {
+            font-size: 1.5rem;
+            color: #003366;
+        }
+
+        .model-details p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            text-align: center;
+            max-width: 1000px;
+            margin: 40px auto;
+            animation: slideInRight 1.5s ease;
+        }
+
+        .gallery h2 {
+            font-size: 1.8rem;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .about,
+            .gallery,
+            .models {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/toyotalogo.png" alt="Toyota Logo" class="header-logo">
+        </div>
+        <h1>Toyota Company Overview</h1>
+        <p>Excellence in Automotive Engineering</p>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>About Toyota</h2>
+            <p>Toyota (founded in 1937) is a global automotive leader, known for pioneering mass production techniques and innovations like the hybrid Prius. It is celebrated for its reliability, eco-friendly technologies, and safety, receiving numerous awards such as World Car of the Year and recognition for sustainability and advanced technologies.</p>
+        </section>
+
+        <section class="models">
+            <h2>Top Rated Toyota Models</h2>
+            <!-- Model 1: Toyota Camry -->
+            <div class="model">
+                <img src="images/toyota/toyota1.jpg" alt="Toyota Camry" class="model-img">
+                <div class="model-details">
+                    <h3>Toyota Camry</h3>
+                    <p><strong>Model Year:</strong> 2024</p>
+                    <p><strong>Features:</strong> Advanced safety systems, hybrid powertrain, luxurious interior.</p>
+                    <p><strong>Performance:</strong> Efficient yet powerful with a smooth driving experience.</p>
+                </div>
+            </div>
+        
+            <!-- Model 3: Toyota RAV4 -->
+            <div class="model">
+                <img src="images/toyota/toyota2.jpg" alt="Toyota RAV4" class="model-img">
+                <div class="model-details">
+                    <h3>Toyota RAV4</h3>
+                    <p><strong>Model Year:</strong> 2024</p>
+                    <p><strong>Features:</strong> All-wheel drive, ample cargo space, premium interior options.</p>
+                    <p><strong>Performance:</strong> A balanced performance SUV with excellent fuel economy.</p>
+                </div>
+            </div>
+        
+            <!-- Model 4: Toyota Supra -->
+            <div class="model">
+                <img src="images/toyota/toyota3.webp" alt="Toyota Supra" class="model-img">
+                <div class="model-details">
+                    <h3>Toyota Supra</h3>
+                    <p><strong>Model Year:</strong> 2024</p>
+                    <p><strong>Features:</strong> Iconic design, powerful engine options, and sporty handling.</p>
+                    <p><strong>Performance:</strong> High-performance sports car with incredible acceleration.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- <section class="gallery">
+            <h2>Toyota Gallery</h2>
+            <div class="gallery-grid">
+                <img src="images/camry.jpg" alt="Toyota Camry" class="gallery-img">
+                <img src="images/corolla.jpg" alt="Toyota Corolla" class="gallery-img">
+                <Add more gallery images -->
+            </div>
+        </section> 
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Toyota. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
